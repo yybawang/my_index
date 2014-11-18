@@ -1,0 +1,29 @@
+<layout name="layout" />
+<div class="center">
+<!-- 最大的中间 -->
+<div class="content">
+	<!-- 弹出菜单,用于增加分类等... -->
+	<div class="menu_left" title="添加分类">
+		<div class="click"><!-- 点击图标 --><span></span></div>
+	</div>
+	<div class="menu_right" title="排序模式">
+		<div class="order_mode"><span>排序模式</span></div>
+		<div class="save_order"><span>保存退出</span></div>
+	</div>
+	<volist name="nav" id="D">
+	<div class="contents">
+		<div class="left" cate_id="{$D.cate_id}" title="添加导航"><b>{$D.cate_name}</b></div>
+		<div class="right">
+			<ul>
+				<volist name="D.navs" id="D2">
+				<li nav_id="{$D2.id}"><a style="background-image:url({$D2.href}favicon.ico)" class="navs" target="_blank" title="{$D2.name}" href="{$D2.href}">{$D2.name}</a></li>
+				</volist>
+			</ul>
+		</div>
+	</div>
+	</volist>
+<!-- 待做........
+1、导航左浮动样式有问题
+2、导航上按住鼠标先弹出编辑，删除链接名或链接就删除。 -->
+</div>
+</div>
