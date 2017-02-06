@@ -14,6 +14,7 @@ class HomeAction extends Action {
 		$this->ajaxReturn($data,$info,1);
 	}
 	public function _ajax_error($info='失败',$data=null){
+		
 		$this->ajaxReturn($data,$info,0);
 	}
 	
